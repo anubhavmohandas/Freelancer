@@ -2,6 +2,7 @@ import { useFadeIn } from './hooks/useFadeIn'
 import { useTheme } from './hooks/useTheme'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import About from './components/About'
 import Services from './components/Services'
 import Projects from './components/Projects'
 import Process from './components/Process'
@@ -18,6 +19,7 @@ export default function App() {
     <div ref={ref}>
       <Navbar theme={theme} toggleTheme={toggle} />
       <Hero />
+      <About />
       <Services />
       <Projects />
       <Process />

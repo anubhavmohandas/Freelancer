@@ -24,25 +24,25 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 sm:py-28 px-4 sm:px-6">
+    <section id="services" className="py-24 sm:py-32 px-4 sm:px-6 bg-surface-alt">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 fade-in">
+        <h2 className="text-4xl sm:text-5xl font-bold text-center mb-5 fade-in">
           What I Do
         </h2>
-        <p className="text-muted text-center mb-14 fade-in">
+        <p className="text-muted text-center text-xl mb-16 fade-in">
           End-to-end solutions, delivered fast
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((s) => (
             <div
               key={s.title}
-              className="fade-in card bg-surface border border-border rounded-2xl p-8 hover:border-accent/40 transition-colors"
+              className="fade-in card bg-surface border border-border rounded-2xl p-10 hover:border-accent/50 transition-colors"
             >
-              <div className="text-4xl mb-4">{s.icon}</div>
-              <h3 className="text-xl font-semibold mb-2">{s.title}</h3>
-              <p className="text-muted mb-6">{s.description}</p>
-              <div className="flex justify-between text-sm">
-                <span className="text-accent font-medium">{s.price}</span>
+              <div className="text-5xl mb-6">{s.icon}</div>
+              <h3 className="text-2xl font-semibold mb-3">{s.title}</h3>
+              <p className="text-muted text-lg mb-8">{s.description}</p>
+              <div className="pt-6 border-t border-border flex justify-between items-center text-sm">
+                <span className="text-accent font-semibold text-base">{s.price}</span>
                 <span className="text-muted">{s.timeline}</span>
               </div>
             </div>
