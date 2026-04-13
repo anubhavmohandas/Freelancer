@@ -42,8 +42,12 @@ export default function Services() {
               <h3 className="text-2xl font-semibold mb-3">{s.title}</h3>
               <p className="text-muted text-lg mb-8">{s.description}</p>
               <div className="pt-6 border-t border-border flex justify-between items-center text-sm">
-                <span className="text-accent font-semibold text-base">{s.price}</span>
-                <span className="text-muted">{s.timeline}</span>
+                <div>
+                  {s.price.split(' / ').map((p, i) => (
+                    <div key={i} className={i === 0 ? 'text-accent font-semibold text-base' : 'text-muted text-sm'}>{p}</div>
+                  ))}
+                </div>
+                <span className="text-muted shrink-0 ml-4">{s.timeline}</span>
               </div>
             </div>
           ))}
