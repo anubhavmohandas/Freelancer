@@ -3,10 +3,10 @@ const WHATSAPP_URL = 'https://wa.me/917486854380'
 const tiers = [
   {
     name: 'Starter',
-    price: '₹5,000 / $60',
+    price: '₹5,000–15,000 / $60–180',
     features: [
       'Landing page',
-      '3 day delivery',
+      '3–5 day delivery',
       '1 revision',
       'Source code',
     ],
@@ -14,10 +14,10 @@ const tiers = [
   },
   {
     name: 'Growth',
-    price: '₹15,000 / $180',
+    price: '₹10,000–30,000 / $120–360',
     features: [
       'Full web app',
-      '7 day delivery',
+      '5–10 day delivery',
       '3 revisions',
       'Source code',
       'Basic SEO',
@@ -40,7 +40,7 @@ const tiers = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="py-20 sm:py-28 px-4 sm:px-6 bg-surface/50">
+    <section id="pricing" className="py-20 sm:py-28 px-4 sm:px-6 bg-surface-alt">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 fade-in">
           Pricing
@@ -52,7 +52,7 @@ export default function Pricing() {
           {tiers.map((tier) => (
             <div
               key={tier.name}
-              className={`fade-in rounded-2xl p-8 flex flex-col border transition-colors ${
+              className={`fade-in card rounded-2xl p-8 flex flex-col border transition-colors ${
                 tier.highlighted
                   ? 'bg-accent/5 border-accent'
                   : 'bg-surface border-border hover:border-accent/40'
@@ -61,7 +61,7 @@ export default function Pricing() {
               <h3 className="text-lg font-semibold text-muted uppercase tracking-wider mb-2">
                 {tier.name}
               </h3>
-              <div className="text-3xl font-bold mb-6">{tier.price}</div>
+              <div className="text-2xl sm:text-3xl font-bold mb-6">{tier.price}</div>
               <ul className="flex-1 space-y-3 mb-8">
                 {tier.features.map((f) => (
                   <li key={f} className="flex items-center gap-3 text-muted">
@@ -88,7 +88,7 @@ export default function Pricing() {
                 rel="noopener noreferrer"
                 className={`text-center font-semibold py-3 rounded-lg transition ${
                   tier.highlighted
-                    ? 'bg-accent text-bg hover:brightness-110'
+                    ? 'bg-accent text-accent-fg hover:brightness-110'
                     : 'border border-accent text-accent hover:bg-accent/10'
                 }`}
               >

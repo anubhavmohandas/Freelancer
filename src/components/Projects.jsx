@@ -14,8 +14,8 @@ const projects = [
   },
   {
     name: 'Musicians Den India',
-    description: 'Full music platform for Indian musicians',
-    tags: ['React', 'Music', 'Community'],
+    description: 'Music school platform for instrument classes and music teaching',
+    tags: ['React', 'Music', 'Education'],
     link: 'https://musiciansdenindia.com',
   },
   {
@@ -28,7 +28,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 sm:py-28 px-4 sm:px-6 bg-surface/50">
+    <section id="projects" className="py-20 sm:py-28 px-4 sm:px-6 bg-surface-alt">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 fade-in">
           My Work
@@ -40,7 +40,7 @@ export default function Projects() {
           {projects.map((p) => (
             <div
               key={p.name}
-              className="fade-in bg-surface border border-border rounded-2xl p-8 flex flex-col hover:border-accent/40 transition-colors"
+              className="fade-in card bg-surface border border-border rounded-2xl p-8 flex flex-col hover:border-accent/40 transition-colors"
             >
               <h3 className="text-xl font-semibold mb-2">{p.name}</h3>
               <p className="text-muted mb-4 flex-1">{p.description}</p>

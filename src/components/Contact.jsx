@@ -16,7 +16,7 @@ export default function Contact() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-accent text-bg font-semibold text-lg px-10 py-4 rounded-xl hover:brightness-110 transition"
+            className="inline-flex items-center gap-3 bg-accent text-accent-fg font-semibold text-lg px-10 py-4 rounded-xl hover:brightness-110 transition"
           >
             <svg
               className="w-6 h-6"
@@ -30,10 +30,10 @@ export default function Contact() {
         </div>
         <div className="mt-8 text-muted fade-in">
           <a
-            href="mailto:anubhav.manav147@gmail.com"
+            href="mailto:reachme.anubhav@gmail.com"
             className="hover:text-text transition-colors"
           >
-            anubhav.manav147@gmail.com
+            reachme.anubhav@gmail.com
           </a>
         </div>
         <div className="mt-6 flex justify-center gap-6 fade-in">

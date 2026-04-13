@@ -36,7 +36,7 @@ export default function Services() {
           {services.map((s) => (
             <div
               key={s.title}
-              className="fade-in bg-surface border border-border rounded-2xl p-8 hover:border-accent/40 transition-colors"
+              className="fade-in card bg-surface border border-border rounded-2xl p-8 hover:border-accent/40 transition-colors"
             >
               <div className="text-4xl mb-4">{s.icon}</div>
               <h3 className="text-xl font-semibold mb-2">{s.title}</h3>

@@ -1,4 +1,5 @@
 import { useFadeIn } from './hooks/useFadeIn'
+import { useTheme } from './hooks/useTheme'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Services from './components/Services'
@@ -11,10 +12,11 @@ import WhatsAppFloat from './components/WhatsAppFloat'
 
 export default function App() {
   const ref = useFadeIn()
+  const { theme, toggle } = useTheme()
 
   return (
     <div ref={ref}>
-      <Navbar />
+      <Navbar theme={theme} toggleTheme={toggle} />
       <Hero />
       <Services />
       <Projects />
