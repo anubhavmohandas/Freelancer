@@ -3,6 +3,7 @@ import { useState } from 'react'
 const WHATSAPP_URL = 'https://wa.me/917486854380'
 
 const navLinks = [
+  { label: 'About', href: '#about' },
   { label: 'Work', href: '#projects' },
   { label: 'Services', href: '#services' },
   { label: 'Pricing', href: '#pricing' },
