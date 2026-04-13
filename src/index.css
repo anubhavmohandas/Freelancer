@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: var(--c-bg);
+  --color-surface: var(--c-surface);
+  --color-surface-alt: var(--c-surface-alt);
+  --color-border: var(--c-border);
+  --color-accent: var(--c-accent);
+  --color-accent-fg: var(--c-accent-fg);
+  --color-text: var(--c-text);
+  --color-muted: var(--c-muted);
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+}
+
+/* Light mode (default) */
+:root {
+  --c-bg: #f8fafc;
+  --c-surface: #ffffff;
+  --c-surface-alt: #f1f5f9;
+  --c-border: #e2e8f0;
+  --c-accent: #0891b2;
+  --c-accent-fg: #ffffff;
+  --c-text: #1e293b;
+  --c-muted: #64748b;
+}
+
+/* Dark mode */
+.dark {
+  --c-bg: #0a0f1a;
+  --c-surface: #111827;
+  --c-surface-alt: #0d1322;
+  --c-border: #1e293b;
+  --c-accent: #06b6d4;
+  --c-accent-fg: #0a0f1a;
+  --c-text: #f1f5f9;
+  --c-muted: #94a3b8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--c-bg);
+  color: var(--c-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Card shadow for light mode depth */
+.card {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
+}
+
+.dark .card {
+  box-shadow: none;
+}
+
+.dark .card:hover {
+  box-shadow: none;
+}
+
+/* Fade-in on scroll animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

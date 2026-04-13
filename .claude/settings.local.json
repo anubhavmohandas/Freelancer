@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create:*)",
+      "Read(//usr/local/**)",
+      "Read(//Users/anubhavmohandas/.nvm/versions/**)",
+      "Read(//opt/homebrew/**)",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}
